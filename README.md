@@ -1,1 +1,1 @@
-will update soon 
+Resume maker with easiest possible thing 
