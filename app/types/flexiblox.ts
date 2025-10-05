@@ -14,34 +14,34 @@ which can be
 // Core blok interface 
 
 export interface Blok {
-    id: string;                   
-    type: BlokType;               
-    content?: RichTextNode[];     
-    link?: string;                
-    dateRange?: DateRange;        
+    id: string;
+    type: BlokType;
+    content?: RichTextNode[];
+    link?: string;
+    dateRange?: DateRange;
     children?: Blok[];            // Allowing nesting of other bloks
-    layout?: BlokLayout;          
-    styling?: BlokStyling;        
+    layout?: BlokLayout;
+    styling?: BlokStyling;
 }
 
 // Blok types 
 
 export type BlokType =
-    | 'text'        
-    | 'heading'     
-    | 'list'        
-    | 'contact'     
-    | 'divider'     
-    | 'spacer'      
-    | 'container'   
-    | string;       
+    | 'text'
+    | 'heading'
+    | 'list'
+    | 'contact'
+    | 'divider'
+    | 'spacer'
+    | 'container'
+    | string;
 
 // Rich text interface - preserve the text formatting 
 
 export interface RichTextNode {
-    type: 'text' | 'bold' | 'italic' | 'link';
-    text?: string;                
-    children?: RichTextNode[];               
+    type: 'text' | 'bold' | 'italic';
+    text?: string;
+    children?: RichTextNode[];
 }
 
 export type TextContent = RichTextNode[];
@@ -49,34 +49,34 @@ export type TextContent = RichTextNode[];
 // Date interface to add for formatting in displaying dates
 
 export interface DateRange {
-    start?: string;               
-    end?: string;                 
+    start?: string;
+    end?: string;
     displayFormat?: DateDisplayFormat;
-    customLabel?: string;        
-    showDuration?: boolean;      
+    customLabel?: string;
+    showDuration?: boolean;
 }
 
 // Date display types
 
 export type DateDisplayFormat =
-    | 'MMM YYYY'    
-    | 'YYYY'        
-    | 'custom';     
+    | 'MMM YYYY'
+    | 'YYYY'
+    | 'custom';
 
 // Layout interface 
 
 export interface BlokLayout {
-    width: BlokWidth;             
-    alignment?: TextAlignment;    
-    columns?: number;             
-    gap?: SpacingSize;           
+    width: BlokWidth;
+    alignment?: TextAlignment;
+    columns?: number;
+    gap?: SpacingSize;
 }
 
 export type BlokWidth =
-    | 'full'      
-    | 'half'      
-    | 'third'     
-    | 'quarter';  
+    | 'full'
+    | 'half'
+    | 'third'
+    | 'quarter';
 
 export type TextAlignment =
     | 'left'
@@ -85,40 +85,40 @@ export type TextAlignment =
     | 'justify';
 
 export type SpacingSize =
-    | 'none'      
-    | 'sm'        
-    | 'md'        
-    | 'lg';       
+    | 'none'
+    | 'sm'
+    | 'md'
+    | 'lg';
 
 // Blok styling interface
 
 export interface BlokStyling {
-    fontSize?: FontSize;          
-    fontWeight?: FontWeight;      
-    lineHeight?: LineHeight;      
-    underline?: boolean;          
-    italic?: boolean;             
+    fontSize?: FontSize;
+    fontWeight?: FontWeight;
+    lineHeight?: LineHeight;
+    underline?: boolean;
+    italic?: boolean;
 }
 
 export type FontSize =
-    | 'xs'        
-    | 'sm'        
-    | 'base'      
-    | 'lg'        
-    | 'xl'        
-    | '2xl'       
-    | '3xl';      
+    | 'xs'
+    | 'sm'
+    | 'base'
+    | 'lg'
+    | 'xl'
+    | '2xl'
+    | '3xl';
 
 export type FontWeight =
-    | 'normal'    
-    | 'medium'    
-    | 'semibold'  
-    | 'bold';     
+    | 'normal'
+    | 'medium'
+    | 'semibold'
+    | 'bold';
 
 export type LineHeight =
-    | 'sm'        
-    | 'md'        
-    | 'lg';       
+    | 'sm'
+    | 'md'
+    | 'lg';
 
 // Utility types for initial creation of bloks
 

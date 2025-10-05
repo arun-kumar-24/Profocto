@@ -3,6 +3,7 @@ import {
     BlokType,
     RichTextNode
 } from '../app/types/flexiblox';
+import { createTextContent } from '../utils/richTextParser';
 
 /*
 
@@ -33,12 +34,6 @@ export function createBlok(type: BlokType, options: Partial<Blok> = {}): Blok {
     };
 
     return baseBlok;
-}
-
-// Create simple text content from a string
-
-export function createTextContent(text: string): RichTextNode[] {
-    return [{ type: 'text', text }];
 }
 
 // Create rich text content with formatting
